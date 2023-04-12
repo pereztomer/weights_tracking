@@ -17,13 +17,15 @@ def add_weight(new_weight, date):
 
 
 def main(name):
-    d = datetime.date(2022, 12, 25)
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    d = datetime.date(2022, 3, 26)
+    weight = 61.4
+    add_weight(weight, d)
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    json_object = json.dumps([], indent=4)
+
+    with open("tomer_weights.json", "w") as outfile:
+        outfile.write(json_object)
     main('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
